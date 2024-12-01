@@ -14,6 +14,7 @@
       -- in the form "LspDiagnosticsSignWarning"
 
       require("neo-tree").setup({
+        sources = { "filesystem", "git_status", "buffers" },
         close_if_last_window = false, -- Close Neo-tree if it is the last window left in the tab
         popup_border_style = "rounded",
         enable_git_status = true,
@@ -145,13 +146,16 @@
         },
         nesting_rules = {},
         filesystem = {
-          filtered_items = {
+            filtered_items = {
+            show_path = "none",  -- Это уберет отображение пути
             visible = false, -- when true, they will just be displayed differently than normal items
             hide_dotfiles = true,
             hide_gitignored = true,
             hide_hidden = true, -- only works on Windows for hidden files/directories
             hide_by_name = {
               --"node_modules"
+                ".venv",
+                ".venv"
             },
             hide_by_pattern = { -- uses glob style patterns
               --"*.meta",

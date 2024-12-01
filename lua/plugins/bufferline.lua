@@ -1,4 +1,4 @@
- require('bufferline').setup {
+require('bufferline').setup {
       options = {
         numbers = "none",  -- Отключение номеров буферов
         close_command = 'bdelete',  -- Команда для закрытия буфера
@@ -9,7 +9,7 @@
           icon = " ",  -- Индикатор активного буфера
           style = 'icon'  -- Стиль индикатора
         },
-        buffer_close_icon = ' ⨯ ',  -- Иконка для закрытия буфера
+        buffer_close_icon = ' ✖ ',  -- Иконка для закрытия буфера
         modified_icon = '[+]',  -- Иконка для измененного буфера
         close_icon = '',  -- Иконка для закрытия
         left_trunc_marker = '',  -- Маркер для обрезки слева
@@ -20,7 +20,7 @@
         diagnostics = false,  -- Отключение диагностики на вкладках
         offsets = {  -- Отступы для интеграции с панелями (например, nvim-tree)
           {
-            filetype = "NvimTree",  -- Отступ для файлового менеджера
+            filetype = "neo-tree",  -- Отступ для файлового менеджера
             text = "File Explorer",  -- Текст для панели
             text_align = "center",  -- Выравнивание текста по центру
           }

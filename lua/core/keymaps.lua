@@ -9,6 +9,9 @@ vim.keymap.set("n",  "<C-Return>", ":w<CR>", 	   { noremap = true, silent = true
 vim.keymap.set("i",  "<C-s>",      "<cmd>:w<CR>", { noremap = true, silent = true})
 vim.keymap.set("i",  "<C-Return>", "<cmd>:w<CR>", { noremap = true, silent = true})
 
+
+
+
 -- esc 
 vim.keymap.set("i",  "jk",         "<Esc>",        { noremap = true, silent = true})
 
@@ -67,4 +70,4 @@ vim.keymap.set('n', '<leader>tv', ':ToggleTerm direction=vertical size=40<CR>')
 vim.api.nvim_set_keymap('n', '<C-w>', [[:lua CloseBufferWithNoDelay()<CR>]], { noremap = true, silent = true })
 
 --yazi
-vim.api.nvim_set_keymap('n', '<C-y>', ':Yazi<CR>', { noremap = true, silent = true })
+vim.keymap.set('n', '<A-y>', ':Yazi<CR>', { noremap = true, silent = true })

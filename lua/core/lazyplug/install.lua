@@ -31,20 +31,28 @@ return {
     -- noice
     { "folke/noice.nvim", event = "VeryLazy" },
     { "MunifTanjim/nui.nvim" }, -- Плагин-зависимость
-    --notifysend
+    -- notifysend
     { "rcarriga/nvim-notify" },
-    --comments
+    -- comments
     { "terrortylor/nvim-comment" },
-    --code runner
+    -- code runner
     { "CRAG666/code_runner.nvim" },
-    --yazi for nvim
+    -- yazi for nvim
     { "mikavilpas/yazi.nvim" },
-    --TODO 
+    --TODO: 
     { "folke/todo-comments.nvim" },
-    --autopairs
+    -- autopairs
     { "windwp/nvim-autopairs", event = "InsertEnter", config = true },
-    --gitsing
+    -- gitsing
     { "lewis6991/gitsigns.nvim" },
+    -- cinnamon for cursor
+    { "declancm/cinnamon.nvim" },
+    -- blankline
+    { "lukas-reineke/indent-blankline.nvim" },
+    -- context
+    { "nvim-treesitter/nvim-treesitter-context" },
+    -- lazygit
+    { "kdheepak/lazygit.nvim" }
 
 }
 

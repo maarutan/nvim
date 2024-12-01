@@ -1,5 +1,4 @@
-require("yazi").setup({
-  -- ... other lazy.nvim configuration from above
+require("yazi").setup({  -- ... other lazy.nvim configuration from above
 
   ---@type YaziConfig
   opts = {

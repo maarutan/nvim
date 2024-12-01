@@ -1,19 +1,21 @@
 -- Использование пробелов вместо табуляции
-vim.opt.expandtab = true       -- Преобразовывать Tab в пробелы
+vim.opt.expandtab = false       -- Преобразовывать Tab в пробелы
 vim.opt.tabstop = 4            -- Один табулятор = 4 пробела
 vim.opt.shiftwidth = 4         -- Сдвиг в 4 пробела при использовании команд выравнивания
 vim.opt.softtabstop = 4        -- При нажатии Tab вставляются 4 пробела
 vim.opt.numberwidth = 5      -- Ширина столбца с номерами строк
 vim.opt.signcolumn = 'yes'   -- Всегда показывать столбец для знаков (это создаст маржин)
 
+
+vim.opt.list = true
+vim.opt.listchars = { tab = "│ ", trail = "·" }
+
 -- Включение автокоманд для правильной обработки типов файлов
 vim.cmd("filetype plugin indent on")
 vim.cmd([[autocmd VimEnter * lua require('core.options')]])
 vim.opt.cursorline = true      -- Подсвечивать строку с курсором
+
 -- vim.o.cursorcolumn = true  -- Включить подсветку столбца с курсором
-
-
-
 -- Настройки номеров строк
 vim.opt.number = true           -- Показывать номера строк
 vim.opt.relativenumber = true   -- Относительные номера строк
