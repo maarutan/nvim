@@ -30,6 +30,28 @@ require("plugins.context")
 require("plugins.lazygit")
 require("plugins.dashboard")
 require("plugins.cmp")
+require("plugins.mason")
 -- require("plugins.autosession")
 -- require("plugins.")
+require("plugins.null-ls")
+
+-- Подключаем настройки для LSP
+require('plugins.lsp.python')  -- Python LSP
+require('plugins.lsp.js')      -- JS/TS LSP
+require('plugins.lsp.css')     -- CSS LSP
+require('plugins.lsp.sql')     -- SQL LSP
+
+-- Подключаем настройки для линтеров
+require('plugins.linters.pylint')   -- pylint
+require('plugins.linters.flake8')   -- flake8
+require('plugins.linters.eslint')   -- eslint
+require('plugins.linters.stylelint')  -- stylelint
+
+-- Подключаем настройки для форматеров
+require('plugins.formatters.black')    -- black
+require('plugins.formatters.prettierd')    -- prettierd
+require('plugins.formatters.sqlfluff')    -- sqlfluff
+
+-- Настройка клавиш
+require('plugins.utils.mappings')     -- Маппинги
 

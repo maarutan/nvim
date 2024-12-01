@@ -61,11 +61,21 @@ return {
     { "saadparwaiz1/cmp_luasnip" },
     { "onsails/lspkind-nvim" },
     -- lsp
+    { "neovim/nvim-lspconfig" },
     -- codiem
     -- chatgpt
     -- dashboard
     { "glepnir/dashboard-nvim" },
     -- auto session
-    { "rmagatti/auto-session" }
+    { "rmagatti/auto-session" },
+    -- masson
+    { "williamboman/mason.nvim" },
+    { "williamboman/mason-lspconfig.nvim" },
+    --null-ls
+    { "jose-elias-alvarez/null-ls.nvim" },
+    { "nvim-lua/plenary.nvim" } -- Плагин-зависимость
+
+
+
 }
 

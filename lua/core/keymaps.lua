@@ -71,3 +71,7 @@ vim.api.nvim_set_keymap('n', '<C-w>', [[:lua CloseBufferWithNoDelay()<CR>]], { n
 
 --yazi
 vim.keymap.set('n', '<A-y>', ':Yazi<CR>', { noremap = true, silent = true })
+
+-- Переопределение сочетания клавиш S-C-n
+vim.keymap.set('n', '<S-C-n>', ':nohl<CR>', { noremap = true, silent = true })
+
