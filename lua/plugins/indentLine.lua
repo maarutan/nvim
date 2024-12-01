@@ -1,13 +1,7 @@
--- Настройка плагина ibl.nvim для отображения отступов
+
 require("ibl").setup({
-  scope = {
-    enabled = true,  -- Включаем подсветку текущего контекста
-  },
+    exclude = {
+        filetypes = { "dashboard" }  -- Исключаем тип файлов dashboard
+    }
 })
-
--- Плавная прокрутка
-vim.o.lazyredraw = true  -- Отключаем перерисовку экрана при прокрутке
-vim.o.scrolloff = 8      -- Сколько строк будет видно при прокрутке
-vim.o.smoothscroll = true -- Включаем плавную прокрутку
-
 

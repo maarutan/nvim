@@ -52,7 +52,20 @@ return {
     -- context
     { "nvim-treesitter/nvim-treesitter-context" },
     -- lazygit
-    { "kdheepak/lazygit.nvim" }
-
+    { "kdheepak/lazygit.nvim" },
+    -- cmp
+    { "hrsh7th/nvim-cmp" },
+    { "hrsh7th/cmp-nvim-lsp" },
+    { "hrsh7th/cmp-buffer" },
+    { "hrsh7th/cmp-path" },
+    { "saadparwaiz1/cmp_luasnip" },
+    { "onsails/lspkind-nvim" },
+    -- lsp
+    -- codiem
+    -- chatgpt
+    -- dashboard
+    { "glepnir/dashboard-nvim" },
+    -- auto session
+    { "rmagatti/auto-session" }
 }
 

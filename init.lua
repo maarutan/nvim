@@ -28,4 +28,8 @@ require("plugins.indentLine")
 require("plugins.yazinvim")
 require("plugins.context")
 require("plugins.lazygit")
+require("plugins.dashboard")
+require("plugins.cmp")
+-- require("plugins.autosession")
+-- require("plugins.")
 
