@@ -3,6 +3,8 @@ vim.opt.expandtab = true       -- Преобразовывать Tab в проб
 vim.opt.tabstop = 4            -- Один табулятор = 4 пробела
 vim.opt.shiftwidth = 4         -- Сдвиг в 4 пробела при использовании команд выравнивания
 vim.opt.softtabstop = 4        -- При нажатии Tab вставляются 4 пробела
+vim.opt.numberwidth = 5      -- Ширина столбца с номерами строк
+vim.opt.signcolumn = 'yes'   -- Всегда показывать столбец для знаков (это создаст маржин)
 
 -- Включение автокоманд для правильной обработки типов файлов
 vim.cmd("filetype plugin indent on")
@@ -64,3 +66,4 @@ vim.opt.shortmess:append("c")  -- Отключить стандартные со
 
 -- Отключить стандартную подсветку синтаксиса
 vim.opt.syntax = "off"
+

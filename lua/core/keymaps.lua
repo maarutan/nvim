@@ -34,7 +34,7 @@ vim.api.nvim_set_keymap('n', '<A-S-w>', ':vsplit<CR>', { noremap = true, silent 
 -- Горячие клавиши для изменения размера окна
 vim.api.nvim_set_keymap('n', '<A-S-h>',  ':vertical resize -5<CR>', { noremap = true, silent = true }) -- Уменьшить ширину окна
 vim.api.nvim_set_keymap('n', '<A-S-l>', ':vertical resize +5<CR>', { noremap = true, silent = true }) -- Увеличить ширину окна
--- vim.api.nvim_set_keymap('n', '<A-S-k>',    ':resize -5<CR>', { noremap = true, silent = true })         -- Уменьшить высоту окна
+vim.api.nvim_set_keymap('n', '<A-S-k>',    ':resize -5<CR>', { noremap = true, silent = true })         -- Уменьшить высоту окна
 vim.api.nvim_set_keymap('n', '<A-S-j>',  ':resize +5<CR>', { noremap = true, silent = true })         -- Увеличить высоту окна
 
 
@@ -65,3 +65,6 @@ vim.keymap.set('n', '<leader>tv', ':ToggleTerm direction=vertical size=40<CR>')
 
 -- Горячая клавиша для закрытия буфера или окна: <C-w>
 vim.api.nvim_set_keymap('n', '<C-w>', [[:lua CloseBufferWithNoDelay()<CR>]], { noremap = true, silent = true })
+
+--yazi
+vim.api.nvim_set_keymap('n', '<C-y>', ':Yazi<CR>', { noremap = true, silent = true })

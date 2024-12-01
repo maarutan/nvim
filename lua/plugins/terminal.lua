@@ -32,4 +32,3 @@ end
 
 -- Автокоманда для применения настроек терминала при его открытии
 vim.cmd('autocmd! TermOpen term://* lua set_terminal_keymaps()')
-

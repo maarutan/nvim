@@ -14,8 +14,8 @@ return {
     { "nvim-tree/nvim-web-devicons" },
     -- neo tree
     { "nvim-neo-tree/neo-tree.nvim", branch = "v2.x" },
-    { "nvim-lua/plenary.nvim" },
-    { "MunifTanjim/nui.nvim" },
+    { "nvim-lua/plenary.nvim" }, -- Плагин-зависимость
+    { "MunifTanjim/nui.nvim" }, -- Плагин-зависимость
     -- colorizer
     { "norcalli/nvim-colorizer.lua" },
     -- multi cursor
@@ -30,11 +30,21 @@ return {
     {"akinsho/toggleterm.nvim"},
     -- noice
     { "folke/noice.nvim", event = "VeryLazy" },
-    { "MunifTanjim/nui.nvim" },
+    { "MunifTanjim/nui.nvim" }, -- Плагин-зависимость
     --notifysend
     { "rcarriga/nvim-notify" },
     --comments
     { "terrortylor/nvim-comment" },
+    --code runner
+    { "CRAG666/code_runner.nvim" },
+    --yazi for nvim
+    { "mikavilpas/yazi.nvim" },
+    --TODO 
+    { "folke/todo-comments.nvim" },
+    --autopairs
+    { "windwp/nvim-autopairs", event = "InsertEnter", config = true },
+    --gitsing
+    { "lewis6991/gitsigns.nvim" },
 
 }
 
