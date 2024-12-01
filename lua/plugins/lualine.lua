@@ -1,9 +1,9 @@
 require('lualine').setup {
   options = {
-    icons_enabled = true,
-    theme = 'auto',
-    component_separators = { left = '', right = ''},
-    section_separators = { left = '', right = ''},
+    icons_enabled = true,        -- Включить иконки
+    theme = 'auto',              -- Тема
+    component_separators = { left = '', right = '' },
+    section_separators = { left = '', right = '' },
     disabled_filetypes = {
       statusline = {},
       winbar = {},
@@ -20,9 +20,27 @@ require('lualine').setup {
   },
   sections = {
     lualine_a = {'mode'},
-    lualine_b = {'branch', 'diff', 'diagnostics'},
-    lualine_c = {'filename'},
-    lualine_x = { 'fileformat', 'filetype'},
+    lualine_b = {
+      { 'branch', icon = '' },
+      { 'diff', icon = '' },
+      { 'diagnostics', icon = '' }
+    },
+    lualine_c = {
+      'filename',
+      function()
+        return '🌊🌊🌊'
+      end,
+    },
+    lualine_x = {
+      function()
+        return  "🌊🌊🌊" -- Текущее время
+      end,
+      function()
+        return  " " -- Текущее время
+      end,
+
+      'fileformat', 'filetype'
+    },
     lualine_y = {'progress'},
     lualine_z = {'location'}
   },
@@ -39,3 +57,4 @@ require('lualine').setup {
   inactive_winbar = {},
   extensions = {}
 }
+

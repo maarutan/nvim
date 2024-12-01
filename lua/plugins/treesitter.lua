@@ -30,7 +30,7 @@ require'nvim-treesitter.configs'.setup {
     enable = true,  -- Включаем подсветку синтаксиса с помощью Tree-sitter
 
     -- Отключаем подсветку для определённых языков (если необходимо)
-    disable = { "c", "rust" },
+    disable = { "" },
 
     -- Функция для отключения подсветки для больших файлов (если необходимо)
     disable = function(lang, buf)
