@@ -15,3 +15,5 @@ vim.keymap.set('n', '<leader>gs', builtin.git_status, {})
 
 -- Выбор цветовой схемы
 vim.keymap.set('n', '<leader>cs', builtin.colorscheme, {})
+
+

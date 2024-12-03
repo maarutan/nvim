@@ -1,10 +1,10 @@
-return { 
-    -- color theme
+return {
+    -- color themes
     { "catppuccin/nvim" },
     { "ellisonleao/gruvbox.nvim" },
     { "folke/tokyonight.nvim" },
     { "navarasu/onedark.nvim" },
-    { "rebelot/kanagawa.nvim"},
+    { "rebelot/kanagawa.nvim" },
     { "projekt0n/github-nvim-theme" },
     { "Mofiqul/vscode.nvim" },
     { "EdenEast/nightfox.nvim" },
@@ -12,18 +12,18 @@ return {
     { "nvim-treesitter/nvim-treesitter" },
     -- telescope
     { "nvim-telescope/telescope.nvim" },
-    { "nvim-lua/plenary.nvim" },  -- Плагин-зависимость
-    -- lua line 
+    { "nvim-lua/plenary.nvim" },
+    -- lua line
     { "nvim-lualine/lualine.nvim" },
     -- devicons
     { "nvim-tree/nvim-web-devicons" },
     -- neo tree
     { "nvim-neo-tree/neo-tree.nvim", branch = "v2.x" },
-    { "MunifTanjim/nui.nvim" }, -- Плагин-зависимость
+    { "MunifTanjim/nui.nvim" },
     -- colorizer
     { "norcalli/nvim-colorizer.lua" },
     -- multi cursor
-    { 'mg979/vim-visual-multi',branch = 'master', event = 'BufRead' },
+    { 'mg979/vim-visual-multi', branch = 'master', event = 'BufRead' },
     -- Bufferline
     { "akinsho/bufferline.nvim" },
     -- smoothcursor
@@ -42,11 +42,11 @@ return {
     { "CRAG666/code_runner.nvim" },
     -- yazi for nvim
     { "mikavilpas/yazi.nvim" },
-    --TODO: 
+    -- TODO
     { "folke/todo-comments.nvim" },
     -- autopairs
     { "windwp/nvim-autopairs", event = "InsertEnter", config = true },
-    -- gitsing
+    -- gitsigns
     { "lewis6991/gitsigns.nvim" },
     -- cinnamon for cursor
     { "declancm/cinnamon.nvim" },
@@ -71,23 +71,20 @@ return {
     { "neovim/nvim-lspconfig" },
     -- dashboard
     { "glepnir/dashboard-nvim" },
-    -- auto session
-    { "rmagatti/auto-session" },
-    -- masson
+    -- mason
     { "williamboman/mason.nvim" },
     { "williamboman/mason-lspconfig.nvim" },
-    --null-ls
+    -- null-ls
     { "jose-elias-alvarez/null-ls.nvim" },
-    --snippets
+    -- snippets
     { "L3MON4D3/LuaSnip" },
     { "rafamadriz/friendly-snippets" },
-    --scope
+    -- scope
     { "tiagovla/scope.nvim" },
-    --scroll view
+    -- scroll view
     { "dstein64/nvim-scrollview" },
-    --ai code
+    -- ai code
     { "Exafunction/codeium.vim" },
-
-
-
 }
+
+

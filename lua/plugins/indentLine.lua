@@ -23,7 +23,7 @@ require("mini.indentscope").setup({
     -- Плавная анимация
     animation = require("mini.indentscope").gen_animation.linear({
       easing = "in-out",  -- Плавная анимация
-      duration = 20,      -- Длительность анимации
+      duration = 25,      -- Длительность анимации
       unit = "step",      -- Шаги анимации
     }),
 

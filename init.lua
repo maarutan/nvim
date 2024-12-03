@@ -28,11 +28,11 @@ require("plugins.indentLine")
 require("plugins.yazinvim")
 require("plugins.treesitter-context")
 require("plugins.lazygit")
-require("plugins.dashboard")
 require("plugins.mason")
 require("plugins.scope")
 require("plugins.cmp")
 require("plugins.scrollview")
+require("plugins.dashboard")
 --ai-helper
 require("plugins.codeium")
 

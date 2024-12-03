@@ -11,8 +11,6 @@ local function default_header()
     }
 end
 
-
-
 require('dashboard').setup {
     theme = 'doom',
     config = {
@@ -54,18 +52,8 @@ require('dashboard').setup {
                 keymap = 'SPC g b',
                 key_hl = 'Number',
                 action = ':Telescope git_branches'
-            }, {
-                icon = ' ',
-                icon_hl = 'Title',
-                desc = 'Recent Sessions',
-                desc_hl = 'String',
-                key = 'r',
-                keymap = 'SPC s r',
-                key_hl = 'Number',
-                action = ':LoadSession'  -- Заменили на :LoadSession
-            }
+            },
         },
         footer = {}, -- footer
     }
 }
-
