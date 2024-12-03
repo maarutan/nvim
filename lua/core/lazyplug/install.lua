@@ -14,7 +14,6 @@ return {
     { "nvim-tree/nvim-web-devicons" },
     -- neo tree
     { "nvim-neo-tree/neo-tree.nvim", branch = "v2.x" },
-    { "nvim-lua/plenary.nvim" }, -- Плагин-зависимость
     { "MunifTanjim/nui.nvim" }, -- Плагин-зависимость
     -- colorizer
     { "norcalli/nvim-colorizer.lua" },
@@ -30,7 +29,6 @@ return {
     {"akinsho/toggleterm.nvim"},
     -- noice
     { "folke/noice.nvim", event = "VeryLazy" },
-    { "MunifTanjim/nui.nvim" }, -- Плагин-зависимость
     -- notifysend
     { "rcarriga/nvim-notify" },
     -- comments
@@ -51,6 +49,8 @@ return {
     { "lukas-reineke/indent-blankline.nvim" },
     -- context
     { "nvim-treesitter/nvim-treesitter-context" },
+    -- func control
+    { "SmiteshP/nvim-navic" },
     -- lazygit
     { "kdheepak/lazygit.nvim" },
     -- cmp
@@ -64,6 +64,7 @@ return {
     { "neovim/nvim-lspconfig" },
     -- codiem
     -- chatgpt
+    
     -- dashboard
     { "glepnir/dashboard-nvim" },
     -- auto session
@@ -73,9 +74,12 @@ return {
     { "williamboman/mason-lspconfig.nvim" },
     --null-ls
     { "jose-elias-alvarez/null-ls.nvim" },
-    { "nvim-lua/plenary.nvim" } -- Плагин-зависимость
+    --snippets
+    { "L3MON4D3/LuaSnip" },
+    { "rafamadriz/friendly-snippets" },
+    --scope
+    { "tiagovla/scope.nvim" },
 
 
 
 }
-

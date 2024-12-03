@@ -5,13 +5,12 @@ require('lualine').setup {
     component_separators = { left = '', right = '' },
     section_separators = { left = '', right = '' },
     disabled_filetypes = {
-      statusline = {},
-      winbar = {},
+      winbar = {},               -- Отключённые типы для winbar
     },
-    ignore_focus = {},
+    ignore_focus = {'neo-tree'}, -- Игнорируем фокус в neo-tree
     always_divide_middle = true,
     always_show_tabline = true,
-    globalstatus = false,
+    globalstatus = true,         -- Включаем общую статус-линию
     refresh = {
       statusline = 100,
       tabline = 100,
@@ -33,10 +32,10 @@ require('lualine').setup {
     },
     lualine_x = {
       function()
-        return  "🌊🌊🌊" -- Текущее время
+        return  "🌊🌊🌊" -- Пример
       end,
       function()
-        return  " " -- Текущее время
+        return  " " -- Пример
       end,
 
       'fileformat', 'filetype'
