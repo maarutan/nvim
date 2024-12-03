@@ -6,9 +6,14 @@ vim.opt.softtabstop = 4        -- При нажатии Tab вставляютс
 vim.opt.numberwidth = 5      -- Ширина столбца с номерами строк
 vim.opt.signcolumn = 'yes'   -- Всегда показывать столбец для знаков (это создаст маржин)
 
-
-vim.opt.list = true
-vim.opt.listchars = { tab = "│ ", trail = "·" }
+vim.opt.list = true -- Включить отображение listchars
+vim.opt.listchars = {
+    -- space = "·", -- Символ для пробела
+    -- tab = "→ ", -- Символ для табуляции (настроить при необходимости)
+    trail = "→", -- Символ для лишних пробелов
+    -- extends = ">", -- Символ для переполнения строки
+    -- precedes = "<", -- Символ для текста перед началом строки
+}
 
 -- Включение автокоманд для правильной обработки типов файлов
 vim.cmd("filetype plugin indent on")

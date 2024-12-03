@@ -3,6 +3,11 @@ return {
     { "catppuccin/nvim" },
     { "ellisonleao/gruvbox.nvim" },
     { "folke/tokyonight.nvim" },
+    { "navarasu/onedark.nvim" },
+    { "rebelot/kanagawa.nvim"},
+    { "projekt0n/github-nvim-theme" },
+    { "Mofiqul/vscode.nvim" },
+    { "EdenEast/nightfox.nvim" },
     -- treesitter
     { "nvim-treesitter/nvim-treesitter" },
     -- telescope
@@ -59,13 +64,11 @@ return {
     { "hrsh7th/cmp-nvim-lsp" },
     { "hrsh7th/cmp-buffer" },
     { "hrsh7th/cmp-path" },
+    { "hrsh7th/cmp-cmdline" },
     { "saadparwaiz1/cmp_luasnip" },
     { "onsails/lspkind-nvim" },
     -- lsp
     { "neovim/nvim-lspconfig" },
-    -- codiem
-    -- chatgpt
-    
     -- dashboard
     { "glepnir/dashboard-nvim" },
     -- auto session
@@ -80,6 +83,10 @@ return {
     { "rafamadriz/friendly-snippets" },
     --scope
     { "tiagovla/scope.nvim" },
+    --scroll view
+    { "dstein64/nvim-scrollview" },
+    --ai code
+    { "Exafunction/codeium.vim" }
 
 
 

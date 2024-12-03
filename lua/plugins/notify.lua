@@ -1,3 +1,4 @@
+-- Настройка nvim-notify
 require("notify").setup({
   stages = "fade_in_slide_out",  -- Этапы анимации
   timeout = 1000,                -- Время отображения уведомления (в миллисекундах)
@@ -16,4 +17,7 @@ require("notify").setup({
 
 -- Переопределяем vim.notify для использования nvim-notify
 vim.notify = require("notify")
+
+-- Создаём отдельное окно для уведомлений (горячая клавиша)
+
 

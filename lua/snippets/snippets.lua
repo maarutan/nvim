@@ -1,33 +1,23 @@
-require('luasnip.loaders.from_vscode').lazy_load() -- Загрузка готовых сниппетов
-
+-- lua/config/luasnip.lua
 local luasnip = require('luasnip')
+require('luasnip.loaders.from_vscode').lazy_load() -- Загрузка сниппетов из расширений VSCode
 
--- <Tab> для перехода вперед или разворачивания сниппета
-vim.keymap.set({ "i", "s" }, "<Tab>", function()
-    if luasnip.expand_or_jumpable() then
-        luasnip.expand_or_jump()
-    else
-        vim.api.nvim_feedkeys(vim.api.nvim_replace_termcodes("<Tab>", true, true, true), "n", true)
-    end
-end, { silent = true })
+-- Настройка сниппетов (если нужно, можно настроить свои)
+luasnip.config.set_config({
+  history = true, -- История переходов в сниппетах
+  updateevents = "TextChanged,TextChangedI", -- Обновление сниппетов при изменении текста
+})
 
--- <S-Tab> для перехода назад
-vim.keymap.set({ "i", "s" }, "<S-Tab>", function()
-    if luasnip.jumpable(-1) then
-        luasnip.jump(-1)
-    else
-        vim.api.nvim_feedkeys(vim.api.nvim_replace_termcodes("<S-Tab>", true, true, true), "n", true)
-    end
-end, { silent = true })
+-- Пример простого сниппета
+luasnip.add_snippets("lua", {
+    luasnip.snippet("fn", {
+        luasnip.text_node("function "),
+        luasnip.insert_node(1, "name"),
+        luasnip.text_node("()"),
+        luasnip.insert_node(0),
+        luasnip.text_node("end"),
+    })
+})
 
--- <Enter> для подтверждения выбора или вставки сниппета
-vim.keymap.set("i", "<CR>", function()
-    if luasnip.expand_or_jumpable() then
-        luasnip.expand_or_jump()
-        return ""
-    else
-        -- Стандартное поведение Enter (новая строка)
-        return vim.api.nvim_replace_termcodes("<CR>", true, true, true)
-    end
-end, { silent = true, expr = true })
+return luasnip
 

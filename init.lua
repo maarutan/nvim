@@ -32,6 +32,14 @@ require("plugins.dashboard")
 require("plugins.mason")
 require("plugins.scope")
 require("plugins.cmp")
+require("plugins.scrollview")
+--ai-helper
+require("plugins.codeium")
 
 -- snippets
 require("snippets.snippets")
+require("snippets.pyright")
+
+-- devlanguag
+require("devlangs.config")
+

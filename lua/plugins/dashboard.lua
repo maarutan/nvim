@@ -26,7 +26,7 @@ require('dashboard').setup {
                 key = 'e',
                 keymap = 'SPC e',
                 key_hl = 'Number',
-                action = ':Neotree float'
+                action = ':NeoTreeFocus'
             }, {
                 icon = '󰈞 ',
                 icon_hl = 'Title',

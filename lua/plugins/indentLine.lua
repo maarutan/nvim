@@ -1,27 +1,30 @@
+-- Настройка ibl (Indent Blankline)
 require("ibl").setup({
     indent = {
-        char = "│",
+        char = "│", -- Символ для отображения линий
     },
     scope = {
-        enabled = false,
+        enabled = false, -- Отключаем подсветку области для ibl
     },
     exclude = {
-        filetypes = { "dashboard" },
+        filetypes = { "dashboard" }, -- Исключаем файлы
     },
 })
 
+-- Настраиваем тусклый цвет для ibl
+vim.api.nvim_set_hl(0, "IndentBlanklineChar", { fg = "#3e4451", nocombine = true })
 
+-- Настройка mini.indentscope
 require("mini.indentscope").setup({
   -- Настройки отображения
   draw = {
-    -- Задержка (в мс) перед началом отрисовки индикатора
-    delay = 100,
+    delay = 100, -- Задержка перед началом отрисовки индикатора
 
     -- Плавная анимация
     animation = require("mini.indentscope").gen_animation.linear({
-      easing = "in-out",  -- Используем корректное значение easing
-      duration = 15,     -- Продолжительность анимации в мс
-      unit = "step",      -- Шаг анимации
+      easing = "in-out",  -- Плавная анимация
+      duration = 20,      -- Длительность анимации
+      unit = "step",      -- Шаги анимации
     }),
 
     -- Приоритет символа
@@ -38,48 +41,20 @@ require("mini.indentscope").setup({
 
   -- Опции для вычисления области
   options = {
-    border = 'both',
-    indent_at_cursor = true,
-    try_as_border = false,
+    border = 'both',         -- Отображение верхней и нижней границ области
+    indent_at_cursor = true, -- Использовать отступ на позиции курсора
+    try_as_border = false,   -- Не рассматривать текущую строку как границу области
   },
 
   -- Символ для отображения индикатора
   symbol = "│",
 })
 
-
-require("mini.indentscope").setup({
-  -- Настройки отображения
-  draw = {
-    -- Задержка (в мс) перед началом отрисовки индикатора
-    delay = 100,
-
-    -- Плавная анимация
-    animation = require("mini.indentscope").gen_animation.linear({
-      easing = "in-out",  -- Используем корректное значение easing
-      duration = 15,     -- Продолжительность анимации в мс
-      unit = "step",      -- Шаг анимации
-    }),
-
-    -- Приоритет символа
-    priority = 2,
-  },
-
-  -- Горячие клавиши
-  mappings = {
-    object_scope = 'ii',
-    object_scope_with_border = 'ai',
-    goto_top = '[i',
-    goto_bottom = ']i',
-  },
-
-  -- Опции для вычисления области
-  options = {
-    border = 'both',
-    indent_at_cursor = true,
-    try_as_border = false,
-  },
-
-  -- Символ для отображения индикатора
-  symbol = "│",
+-- Добавляем игнорирование для mini.indentscope
+vim.api.nvim_create_autocmd("FileType", {
+  pattern = { "dashboard", "help", "NvimTree", "lazy", "terminal" }, -- Список типов файлов для игнорирования
+  callback = function()
+    vim.b.miniindentscope_disable = true -- Отключение mini.indentscope для текущего буфера
+  end,
 })
+

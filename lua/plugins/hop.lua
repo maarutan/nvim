@@ -13,4 +13,3 @@ require('hop').setup({
 vim.api.nvim_set_keymap('n', '<leader>w', "<cmd>lua require'hop'.hint_words()<CR>", { noremap = true, silent = true })
 -- vim.api.nvim_set_keymap('n', '<leader>s', "<cmd>lua require'hop'.hint_char1()<CR>", { noremap = true, silent = true })
 -- vim.api.nvim_set_keymap('n', '<leader>f', "<cmd>lua require'hop'.hint_char2()<CR>", { noremap = true, silent = true })
-
