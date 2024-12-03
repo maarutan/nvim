@@ -86,7 +86,7 @@ return {
     --scroll view
     { "dstein64/nvim-scrollview" },
     --ai code
-    { "Exafunction/codeium.vim" }
+    { "Exafunction/codeium.vim" },
 
 
 

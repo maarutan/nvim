@@ -42,4 +42,3 @@ require("snippets.pyright")
 
 -- devlanguag
 require("devlangs.config")
-
