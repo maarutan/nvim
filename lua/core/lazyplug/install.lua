@@ -47,6 +47,7 @@ return {
     { "declancm/cinnamon.nvim" },
     -- blankline
     { "lukas-reineke/indent-blankline.nvim" },
+    { "echasnovski/mini.indentscope" },
     -- context
     { "nvim-treesitter/nvim-treesitter-context" },
     -- func control

@@ -1,38 +1,85 @@
-local M = {}
-
-M.setup = function()
-  require("mini.indentscope").setup({
-    symbol = "│", -- Символ для отображения отступа
-    options = { try_as_border = true }, -- Использовать символ как границу
-  })
-
-  -- Отключение для определённых типов файлов
-  vim.api.nvim_create_autocmd("FileType", {
-    pattern = {
-      "help",
-      "alpha",
-      "dashboard",
-      "neo-tree",
-      "Trouble",
-      "lazy",
-      "mason",
-      "notify",
-      "toggleterm",
-      "lazyterm",
+require("ibl").setup({
+    indent = {
+        char = "│",
     },
-    callback = function()
-      vim.b.miniindentscope_disable = true
-    end,
-  })
+    scope = {
+        enabled = false,
+    },
+    exclude = {
+        filetypes = { "dashboard" },
+    },
+})
 
-  -- Настраиваем подсветку символов
-  vim.api.nvim_set_hl(0, "MiniIndentscopeSymbol", { fg = "#FF5733", nocombine = true })
 
-  -- Отключение анимации, если нужно
-  vim.g.miniindentscope_disable_animation = false -- true, если хочешь отключить
-end
+require("mini.indentscope").setup({
+  -- Настройки отображения
+  draw = {
+    -- Задержка (в мс) перед началом отрисовки индикатора
+    delay = 100,
 
-return M
+    -- Плавная анимация
+    animation = require("mini.indentscope").gen_animation.linear({
+      easing = "in-out",  -- Используем корректное значение easing
+      duration = 15,     -- Продолжительность анимации в мс
+      unit = "step",      -- Шаг анимации
+    }),
 
-require("config.indentscope").setup()
+    -- Приоритет символа
+    priority = 2,
+  },
 
+  -- Горячие клавиши
+  mappings = {
+    object_scope = 'ii',
+    object_scope_with_border = 'ai',
+    goto_top = '[i',
+    goto_bottom = ']i',
+  },
+
+  -- Опции для вычисления области
+  options = {
+    border = 'both',
+    indent_at_cursor = true,
+    try_as_border = false,
+  },
+
+  -- Символ для отображения индикатора
+  symbol = "│",
+})
+
+
+require("mini.indentscope").setup({
+  -- Настройки отображения
+  draw = {
+    -- Задержка (в мс) перед началом отрисовки индикатора
+    delay = 100,
+
+    -- Плавная анимация
+    animation = require("mini.indentscope").gen_animation.linear({
+      easing = "in-out",  -- Используем корректное значение easing
+      duration = 15,     -- Продолжительность анимации в мс
+      unit = "step",      -- Шаг анимации
+    }),
+
+    -- Приоритет символа
+    priority = 2,
+  },
+
+  -- Горячие клавиши
+  mappings = {
+    object_scope = 'ii',
+    object_scope_with_border = 'ai',
+    goto_top = '[i',
+    goto_bottom = ']i',
+  },
+
+  -- Опции для вычисления области
+  options = {
+    border = 'both',
+    indent_at_cursor = true,
+    try_as_border = false,
+  },
+
+  -- Символ для отображения индикатора
+  symbol = "│",
+})
