@@ -1,7 +1,7 @@
 --core
 require("core.keymaps")
 require("core.lazyplug.config")
-require('core.options')
+require("core.options")
 require("core.colorscheme")
 
 -- plugins configure
@@ -28,12 +28,10 @@ require("plugins.indentLine")
 require("plugins.yazinvim")
 require("plugins.treesitter-context")
 require("plugins.lazygit")
-require("plugins.mason")
 require("plugins.scope")
 require("plugins.cmp")
 require("plugins.scrollview")
 require("plugins.dashboard")
-require("plugins.null-ls")
 -- sql
 require("plugins.dadbod")
 --ai-helper
