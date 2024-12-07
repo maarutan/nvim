@@ -85,6 +85,13 @@ return {
     { "dstein64/nvim-scrollview" },
     -- ai code
     { "Exafunction/codeium.vim" },
+    -- bdelete
+    { "famiu/bufdelete.nvim" },
+    -- database
+    { "tpope/vim-dadbod" },
+    { "kristijanhusak/vim-dadbod-ui" },
+    { "kristijanhusak/vim-dadbod-completion" },
+
 }
 
 

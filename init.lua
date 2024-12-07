@@ -1,5 +1,5 @@
 --core
-require("core.keymaps") 
+require("core.keymaps")
 require("core.lazyplug.config")
 require('core.options')
 require("core.colorscheme")
@@ -7,7 +7,7 @@ require("core.colorscheme")
 -- plugins configure
 require("plugins.telescope")
 require("plugins.treesitter")
-require("plugins.neotree") 
+require("plugins.neotree")
 require("plugins.lualine")
 --require("plugins.multicursor")
 require("plugins.bufferline")
@@ -33,6 +33,9 @@ require("plugins.scope")
 require("plugins.cmp")
 require("plugins.scrollview")
 require("plugins.dashboard")
+require("plugins.null-ls")
+-- sql
+require("plugins.dadbod")
 --ai-helper
 require("plugins.codeium")
 

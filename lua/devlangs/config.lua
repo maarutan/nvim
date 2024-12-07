@@ -8,4 +8,3 @@ require("devlangs.lsp.html")
 require("devlangs.lsp.typescript")
 -- Подключаем pyright
 require("devlangs.lsp.python")
-

@@ -9,9 +9,6 @@ vim.keymap.set("n",  "<C-Return>", ":w<CR>", 	   { noremap = true, silent = true
 vim.keymap.set("i",  "<C-s>",      "<cmd>:w<CR>", { noremap = true, silent = true})
 vim.keymap.set("i",  "<C-Return>", "<cmd>:w<CR>", { noremap = true, silent = true})
 
-
-
-
 -- esc 
 vim.keymap.set("i",  "jk",         "<Esc>",        { noremap = true, silent = true})
 
@@ -67,11 +64,18 @@ vim.keymap.set('n', '<leader>th', ':ToggleTerm direction=horizontal<CR>')
 vim.keymap.set('n', '<leader>tv', ':ToggleTerm direction=vertical size=40<CR>')
 
 -- Горячая клавиша для закрытия буфера или окна: <C-w>
-vim.api.nvim_set_keymap('n', '<C-w>', [[:lua CloseBufferWithNoDelay()<CR>]], { noremap = true, silent = true })
+vim.api.nvim_set_keymap('n', '<leader>bd', ":Bdelete<CR>", { noremap = true, silent = true })
+vim.api.nvim_set_keymap('n', '<A-q>', ":qa!<CR>", { noremap = true, silent = true })
 
 --yazi
 vim.keymap.set('n', '<A-y>', ':Yazi<CR>', { noremap = true, silent = true })
 
 -- Переопределение сочетания клавиш S-C-n
 vim.keymap.set('n', '<S-C-n>', ':nohl<CR>', { noremap = true, silent = true })
+
+-- работа с вкладками 
+vim.keymap.set('n', '<leader>tt', ':tabnew<CR>', { noremap = true, silent = true })
+vim.keymap.set('n', '<leader>tn', ':tabNext<CR>', { noremap = true, silent = true })
+vim.keymap.set('n', '<leader>tb', ':tabprevious<CR>', { noremap = true, silent = true })
+vim.keymap.set('n', '<leader>tc', ':tabclose<CR>', { noremap = true, silent = true })
 
