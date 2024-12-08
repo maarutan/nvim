@@ -19,8 +19,8 @@ vim.opt.relativenumber = true -- Относительные номера стр�
 
 -- Использование пробелов вместо табуляции
 vim.opt.expandtab = true -- Преобразовывать табуляцию в пробелы
-vim.opt.tabstop = 3
-vim.opt.shiftwidth = 3
+vim.opt.tabstop = 2
+vim.opt.shiftwidth = 2
 vim.opt.expandtab = true
 
 -- Настройка автокоманд для Python
