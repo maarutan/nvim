@@ -76,3 +76,14 @@ vim.keymap.set("n", "<leader>tt", ":tabnew<CR>", { noremap = true, silent = true
 vim.keymap.set("n", "<leader>tn", ":tabNext<CR>", { noremap = true, silent = true })
 vim.keymap.set("n", "<leader>tb", ":tabprevious<CR>", { noremap = true, silent = true })
 vim.keymap.set("n", "<leader>tc", ":tabclose<CR>", { noremap = true, silent = true })
+
+-- выбрать все в NORMALMODE
+vim.keymap.set("n", "<C-a>", "ggVG", { noremap = true, silent = true })
+vim.keymap.set("n", "<C-q>", "GVgg", { noremap = true, silent = true })
+-- выбрать все в INSERTMODE
+vim.keymap.set("i", "<C-q>", "<Esc>GVggi", { noremap = true, silent = true })
+vim.keymap.set("i", "<C-a>", "<Esc>ggVGi", { noremap = true, silent = true })
+
+-- удалять на 1 слово назад и назад
+vim.keymap.set("i", "<C-BS>", "<Esc>vbdi", { noremap = true, silent = true })
+vim.keymap.set("i", "<C-Del>", "<Esc>vedi", { noremap = true, silent = true })
