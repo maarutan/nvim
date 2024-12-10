@@ -3,6 +3,7 @@ require("core.keymaps")
 require("core.lazyplug.config")
 require("core.options")
 require("core.colorscheme")
+require("core.gui") -- ui use neovide
 
 -- plugins configure
 require("plugins.telescope")
@@ -10,7 +11,6 @@ require("plugins.treesitter")
 require("plugins.neotree")
 require("plugins.lualine")
 require("plugins.multicursor")
-require("plugins.bufferline")
 -- require("plugins.smoothcursor") -- cursor
 require("plugins.hop")
 require("plugins.terminal")
@@ -34,6 +34,13 @@ require("plugins.scrollview")
 require("plugins.dashboard")
 require("plugins.illuminate")
 require("plugins.matchup")
+require("plugins.renamer")
+--buffer
+require("plugins.buffer-name")
+require("plugins.buffer-new")
+require("plugins.buffer-del")
+require("plugins.buffer-line")
+
 -- sql
 require("plugins.dadbod")
 --ai-helper
