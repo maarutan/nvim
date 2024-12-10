@@ -34,7 +34,10 @@ require("nvim-treesitter.configs").setup({
 
 	highlight = {
 		enable = true, -- Включаем подсветку синтаксиса с помощью Tree-sitter
-
+		custom_captures = {
+			["keyword"] = "italic", -- Ключевые слова курсивом
+			["comment"] = "italic", -- Комментарии курсивом
+		},
 		-- Отключаем подсветку для определённых языков (если необходимо)
 		disable = { "" },
 
