@@ -1,3 +1,6 @@
+-- quik nvim
+vim.loader.enable()
+
 vim.opt.list = true -- Включить отображение listchars
 vim.opt.listchars = {
 	-- space = "·", -- Символ для пробела

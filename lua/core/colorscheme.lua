@@ -30,9 +30,9 @@ require("onedark").setup({
 --------------------------------------------------------
 -- Настройка для Kanagawa
 --------------------------------------------------------
--- vim.cmd("colorscheme kanagawa-wave")    -- Волн
--- vim.cmd("colorscheme kanagawa-dragon")  -- Дракон
--- vim.cmd("colorscheme kanagawa-lotus")   -- Лотос
+-- vim.cmd("colorscheme kanagawa-wave") -- Волн
+-- vim.cmd("colorscheme kanagawa-dragon") -- Дракон
+-- vim.cmd("colorscheme kanagawa-lotus") -- Лотос
 
 --------------------------------------------------------
 -- Настройка для GitHub
@@ -53,7 +53,7 @@ require("onedark").setup({
 -- Настройка для VSCode
 --------------------------------------------------------
 -- require('vscode').load('light')  -- Светлая тема для VSCode
--- require('vscode').load('dark')   -- Темная тема для VSCode
+-- require("vscode").load("dark") -- Темная тема для VSCode
 
 --------------------------------------------------------
 -- Настройка для Nightfox
