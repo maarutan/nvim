@@ -34,6 +34,7 @@ require("plugins.dashboard")
 require("plugins.illuminate")
 require("plugins.matchup")
 require("plugins.renamer")
+require("plugins.showfile")
 --buffer
 require("plugins.buffer-name")
 require("plugins.buffer-new")

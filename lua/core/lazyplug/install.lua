@@ -5,7 +5,6 @@ return {
 	{ "folke/tokyonight.nvim" },
 	{ "navarasu/onedark.nvim" },
 	{ "rebelot/kanagawa.nvim" },
-	{ "projekt0n/github-nvim-theme" },
 	{ "Mofiqul/vscode.nvim" },
 	{ "EdenEast/nightfox.nvim" },
 	-- treesitter
@@ -25,7 +24,7 @@ return {
 	-- colorizer
 	{ "norcalli/nvim-colorizer.lua" },
 	-- multi cursor
-	{ "mg979/vim-visual-multi", branch = "master", event = "BufRead" },
+	{ "maarutan/nvim-visual-multi", branch = "main" },
 	-- Bufferline
 	{ "akinsho/bufferline.nvim" },
 	-- smoothcursor
@@ -106,4 +105,6 @@ return {
 	{ "filipdutescu/renamer.nvim" },
 	--filename
 	{ "tpope/vim-eunuch" },
+	--swhicher color theme
+	{ "gagbo/circadian.nvim" },
 }

@@ -1,3 +1,7 @@
+vim.g.VM_highlight_matches = "underline" -- Стиль отображения
+vim.g.VM_cursor = "block" -- Установить курсор-блок во всех режимах
+vim.cmd("VMTheme auto")
+
 -- Настройки горячих клавиш для vim-visual-multi
 vim.g.VM_maps = {
 	-- Добавление курсоров вверх и вниз
