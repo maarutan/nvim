@@ -1,5 +1,8 @@
+-- Включение подсветки совпадений
 vim.g.VM_highlight_matches = "underline" -- Стиль отображения
 vim.g.VM_cursor = "block" -- Установить курсор-блок во всех режимах
+
+-- Установить тему для vim-visual-multi
 vim.cmd("VMTheme auto")
 
 -- Настройки горячих клавиш для vim-visual-multi
@@ -9,7 +12,7 @@ vim.g.VM_maps = {
 	["Add Cursor Above"] = "<A-S-C-k>", -- Добавить курсор выше
 
 	-- Добавление курсора в текущую позицию
-	["Add Cursor At Pos"] = "<A-S-C-l>", -- Добавить курсор в текущей позиции
+	["Add Cursor At Pos"] = "<A-S-l>", -- Добавить курсор в текущей позиции
 
 	-- Выбрать все совпадения в документе
 	["Select All"] = "<A-S-a>", -- Выбрать все совпадения
@@ -28,10 +31,16 @@ vim.g.VM_maps = {
 	["Move Right"] = "l",
 }
 
+vim.keymap.set(
+	"n",
+	"<A-S-d>",
+	"<Plug>(VM-Find-Under)",
+	{ noremap = true, silent = true, desc = "Найти слово под курсором" }
+)
 -- Привязка дополнительных клавиш
 vim.keymap.set(
 	"n",
-	"<A-S-C-l>",
+	"<A-S-l>",
 	"<Plug>(VM-Add-Cursor-At-Pos)",
 	{ noremap = true, silent = true, desc = "Добавить курсор в текущую позицию" }
 )
@@ -59,11 +68,6 @@ vim.keymap.set(
 	"<Plug>(VM-Select-All)",
 	{ noremap = true, silent = true, desc = "Выбрать все совпадения в документе" }
 )
-vim.keymap.set("n", "<A-S-d>", "<Plug>(VM-Select-Next)", {
-	noremap = true,
-	silent = true,
-	desc = "Найти следующее совпадение и двигаться вниз",
-})
 vim.keymap.set("n", "<A-S-u>", "<Plug>(VM-Select-Prev)", {
 	noremap = true,
 	silent = true,
