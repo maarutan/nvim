@@ -1,6 +1,6 @@
 require("tokyonight").setup({
 	style = "auto", -- Автоматический выбор стиля
-	light_style = "day", -- Устанавливаем дневной стиль
+	light_style = "night", -- Устанавливаем дневной стиль
 	transparent = false, -- Прозрачность отключена
 	terminal_colors = true, -- Использовать цвета терминала
 	styles = {
@@ -14,9 +14,9 @@ require("tokyonight").setup({
 	lualine_bold = true, -- Жирный текст в lualine
 })
 
-require("circadian").setup({
-	lat = 0.0, -- Укажите вашу широту
-	lon = 0.0, -- Укажите вашу долготу
-	day = { background = "light", colorscheme = "tokyonight_day" }, -- Корректное имя схемы
-	night = { background = "dark", colorscheme = "tokyonight_night" }, -- Корректное имя схемы
-})
+-- Автоматический выбор стиля в зависимости от background
+if vim.o.background == "light" then
+	vim.cmd("colorscheme tokyonight-day")
+else
+	vim.cmd("colorscheme tokyonight-night")
+end

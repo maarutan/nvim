@@ -18,7 +18,20 @@ require("lualine").setup({
 		},
 	},
 	sections = {
-		lualine_a = { "mode" },
+		lualine_a = {
+			function()
+				if vim.fn.exists("b:VM_Selection") == 1 and not vim.tbl_isempty(vim.b.VM_Selection) then
+					local status = vim.fn["VMInfos"]().status:lower() -- Преобразуем статус в нижний регистр
+					local replacements = {
+						["active"] = "MultiCursor",
+					}
+					return replacements[status] or status -- Заменяем, если статус найден в таблице
+				else
+					return ""
+				end
+			end,
+			"mode",
+		},
 		lualine_b = {
 			{ "branch", icon = "" },
 			{ "diff", icon = "" },
@@ -27,17 +40,26 @@ require("lualine").setup({
 		lualine_c = {
 			"filename",
 			function()
-				return "🌊🌊🌊"
+				return "🌊🌊"
 			end,
+			-- function()
+			-- 	return require("pacman").get_pacman_text()
+			-- end,
 		},
 		lualine_x = {
 			function()
-				return "🌊🌊🌊" -- Пример
+				return "🌊🌊"
 			end,
 			function()
-				return " " -- Пример
+				return " "
 			end,
-
+			function()
+				if vim.o.background == "light" then
+					return "󰖨"
+				else
+					return ""
+				end
+			end,
 			"fileformat",
 			"filetype",
 		},

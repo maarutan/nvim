@@ -6,7 +6,7 @@ return {
 	{ "navarasu/onedark.nvim" },
 	{ "rebelot/kanagawa.nvim" },
 	{ "Mofiqul/vscode.nvim" },
-	{ "EdenEast/nightfox.nvim" },
+	{ "sainnhe/everforest" },
 	-- treesitter
 	{ "nvim-treesitter/nvim-treesitter" },
 	-- telescope
@@ -107,4 +107,6 @@ return {
 	{ "tpope/vim-eunuch" },
 	--swhicher color theme
 	{ "gagbo/circadian.nvim" },
+	--pacman animshttps://github.com/maarutan/pacman-anims-nvim?tab=readme-ov-file
+	{ "maarutan/pacman-anims-nvim" },
 }

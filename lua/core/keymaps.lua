@@ -109,19 +109,19 @@ vim.keymap.set("n", "<leader>T", ":term<CR>", { noremap = true, silent = true })
 --reload
 vim.keymap.set("n", "C-S-r", "so $MYVIMRC<CR>", { noremap = true, silent = true })
 
--- system command
-vim.keymap.set("n", "<C-c>", '"+y', { noremap = true, silent = true })
-vim.keymap.set("v", "<C-c>", '"+y', { noremap = true, silent = true })
-vim.keymap.set("n", "<C-v>", '"+p', { noremap = true, silent = true })
-vim.keymap.set("i", "<C-v>", '<Esc>"+pa', { noremap = true, silent = true })
-vim.keymap.set("c", "<C-v>", "<C-r>+", { noremap = true, silent = true })
-vim.keymap.set("c", "<C-v>", "<C-r>+", { noremap = true, silent = true })
-vim.keymap.set("v", "<C-S-c>", '"+y')
-vim.keymap.set("n", "<C-S-c>", '"+yy')
-vim.keymap.set("i", "<C-S-v>", "<C-r>+")
-vim.keymap.set("n", "<C-S-v>", '"+p')
-vim.keymap.set("v", "<C-S-v>", '"+p')
-
+-- -- system command
+-- vim.keymap.set("n", "<C-c>", '"+y', { noremap = true, silent = true })
+-- vim.keymap.set("v", "<C-c>", '"+y', { noremap = true, silent = true })
+-- vim.keymap.set("n", "<C-v>", '"+p', { noremap = true, silent = true })
+-- vim.keymap.set("i", "<C-v>", '<Esc>"+pa', { noremap = true, silent = true })
+-- vim.keymap.set("c", "<C-v>", "<C-r>+", { noremap = true, silent = true })
+-- vim.keymap.set("c", "<C-v>", "<C-r>+", { noremap = true, silent = true })
+-- vim.keymap.set("v", "<C-S-c>", '"+y')
+-- vim.keymap.set("n", "<C-S-c>", '"+yy')
+-- vim.keymap.set("i", "<C-S-v>", "<C-r>+")
+-- vim.keymap.set("n", "<C-S-v>", '"+p')
+-- vim.keymap.set("v", "<C-S-v>", '"+p')
+--
 --commands
 vim.cmd([[
     cnoremap <C-j> <C-n>

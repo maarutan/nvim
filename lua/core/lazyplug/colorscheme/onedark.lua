@@ -24,5 +24,3 @@ if vim.o.background == "light" then
 else
 	require("onedark").setup({ style = "deep" }) -- Тёмная тема
 end
-
-vim.cmd.colorscheme("onedark")

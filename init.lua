@@ -41,7 +41,7 @@ require("plugins.buffer-new")
 require("plugins.buffer-del")
 require("plugins.buffer-line")
 require("plugins.buffer-clouse")
-
+require("plugins.pacman_anims")
 -- sql
 require("plugins.dadbod")
 --ai-helper

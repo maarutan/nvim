@@ -26,7 +26,9 @@ require("bufferline").setup({
 		offsets = {
 			{
 				filetype = "neo-tree",
-				text = "Neo-tree",
+				text = function()
+					return require("pacman").get_pacman_text()
+				end,
 				text_align = "center",
 				separator = true,
 			},
@@ -67,10 +69,10 @@ vim.keymap.set("n", "<leader>tn", function()
 	-- Устанавливаем фон в зависимости от режима
 	if vim.g.is_day_mode then
 		vim.o.background = "light"
-		vim.notify("Смена темы: День ", vim.log.levels.warn, { title = "Тема" })
+		vim.notify("Смена темы: День ", vim.log.levels.WARN, { title = "Тема" })
 	else
 		vim.o.background = "dark"
-		vim.notify("Смена темы: Ночь ", vim.log.levels.warn, { title = "Тема" })
+		vim.notify("Смена темы: Ночь ", vim.log.levels.WARN, { title = "Тема" })
 	end
 
 	-- Выполняем source для файла colorscheme.lua
@@ -84,5 +86,5 @@ vim.keymap.set("n", "<leader>ba", function()
 			vim.cmd("bdelete " .. buf)
 		end
 	end
-	vim.notify("Все буферы закрыты", vim.log.levels.warn, { title = "Bufferline" })
+	vim.notify("Все буферы закрыты", vim.log.levels.WARN, { title = "Bufferline" })
 end, { desc = "Закрыть все буферы" })
