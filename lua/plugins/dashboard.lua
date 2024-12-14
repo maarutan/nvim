@@ -1,5 +1,4 @@
 local M = {}
-
 -- Функция для создания нового буфера
 function M.create_new_buffer()
 	local new_name = vim.fn.input("New file name: ", "")
@@ -190,8 +189,12 @@ require("dashboard").setup({
 				action = ":qa", -- Команда выхода из Neovim
 			},
 		},
-		footer = { "Welcome to Neovim 🚀" }, -- Футер
+		-- Запускаем анимацию
+		footer = function()
+			local pacman = require("pacman").get_pacman_text()
+			local text = "Welcome to neovim 🚀 "
+			return { text, pacman }
+		end,
 	},
 })
-
 return M

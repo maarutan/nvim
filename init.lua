@@ -53,4 +53,3 @@ require("snippets.pyright")
 
 -- devlanguag
 require("devlangs.config")
-vim.api.nvim_set_keymap("n", "<C-S-d>", ":echo 'Работает!'<CR>", { noremap = true, silent = true })

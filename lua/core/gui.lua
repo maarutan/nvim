@@ -1,5 +1,5 @@
 -- Настройка шрифта с увеличением межбуквенного интервала
-vim.o.guifont = "JetBrainsMono Nerd Font:h12:sp2" -- sp2 для увеличения расстояния между символами
+vim.o.guifont = "JetBrainsMono Nerd Font:h11:sp2" -- sp2 для увеличения расстояния между символами
 
 -- -- Эффекты курсора (яркие и красивые)
 -- vim.g.neovide_cursor_vfx_mode = "railgun" -- Используем яркий эффект Railgun
